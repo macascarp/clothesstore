@@ -105,6 +105,10 @@ i.item-right {
     padding: 15px 60px;
 }
 
+.navlist li:last-child {
+    border: none;
+}
+
 .list-nav a {
     color: white;
     transition: .5s;
@@ -124,7 +128,7 @@ i.item-right {
 }
 
 .gallery-cell {
-    width: 100%;
+    width: 100vw;
     height: 500px;
     margin-right: 10px;
     counter-increment: gallery-cell;
@@ -194,6 +198,7 @@ i.item-right {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -214,7 +219,6 @@ i.item-right {
 
 .container {
     width: 90%;
-    height: 80%;
     margin: 20px;
 }
 
@@ -223,14 +227,60 @@ i.item-right {
 }
 
 button.suma-cart {
-    margin: 15px auto;
+    margin: 15px 0;
     text-align: center;
     font-size: 18px;
     background-color: black;
     color: white;
     cursor: pointer;
+    width: 90%;
 }
 
 .cart-button {
     color: white;
+}
+
+/* FOOTER */
+
+.pie {
+    background-color: black;
+    display: flex;
+    height: 300px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.div-ftr {
+    margin-top: 70px;
+}
+
+.pie-item {
+    color: white;
+    display: inline-block;
+    align-self: center;
+    margin-bottom:15px;
+}
+
+.div-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.div-icons i {
+    margin: 10px 5px 0 5px;
+    font-size: 30px;
+}
+
+.copy {
+    border-top: solid white 1px;
+    background-color: black;
+    display: inline-block;
+    color: white;
+    width: 100vw;
+    text-align: center;
+}
+
+.copy p {
+    margin: 20px 0 20px 0;
 }
