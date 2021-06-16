@@ -75,8 +75,8 @@ li{
 li button{
     background-color: white;
     color: black;
-    border: 2px solid black;
-    padding: 10zpx;
+    border: 1px solid black;
+    padding: 5px;
     font-size: 15px;
     cursor: pointer;
     width: 100%;
@@ -140,33 +140,35 @@ i.item-right {
 
 /* SLIDER */
 
-.gallery {
+.gallery.js-flickity {
     box-sizing: border-box;
     margin-bottom: 100px;
+    height: 55vh;
+    width: 100%;
 }
 
 .gallery-cell {
-    width: 100vw;
-    height: 500px;
-    margin-right: 10px;
+    width: 100%;
+    height: 100%;
     counter-increment: gallery-cell;
-    position: absolute;
+    position: relative;
+    background: no-repeat center center scroll;
+    background-position: center;
 
 }
 
 .gallery-cell:nth-child(1) {
-    background-image: url("/assets/img/slider/s1.jpg");
+    background-image: url("/assets/img/slider/s1.png");
+    background-size:contain;
 }
 
 .gallery-cell:nth-child(2) {
-    background-image: url('/assets/img/slider/s2.jpg');
+    background-image: url('/assets/img/slider/S2.png');
 }
 
 .gallery-cell:nth-child(3) {
-    background-image: url('/assets/img/slider/s3.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    object-fit: cover;
+    background-image: url('/assets/img/slider/s3.png');
+
 }
 
 .gallery-cell:before {
@@ -338,13 +340,11 @@ button.suma-cart {
 
     .right li {
         margin: 10px;
-    }
-
-    .div-right {
         display: inline-block;
     }
 
     ul.right {
+        margin-left: 40px;
         width: 100%;
     }
 }
