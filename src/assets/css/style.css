@@ -89,12 +89,13 @@ i.item-right {
 .right li:nth-of-type(1){
     position: relative;
     display: inline-block;
+    width: 10%;
 }
 
 .cart-counter {
     position: absolute;
-    top: 1%;
-    right: 1%;
+    top: 10%;
+    right: 20%;
     color: white;
     font-size: 10px;
     box-sizing: border-box;
@@ -112,7 +113,7 @@ i.item-right {
 
 .navlist {
     display: flex;
-    height: 90px;
+    height: 100px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -121,7 +122,7 @@ i.item-right {
     align-self: center;
     border-right: solid white 1px;
     margin: 0;
-    padding: 0.5% 60px;
+    padding: 15px 60px;
 }
 
 .navlist li:last-child {
@@ -135,7 +136,8 @@ i.item-right {
 }
 
 .list-nav a:hover {
-    text-shadow: ;
+    text-shadow: 2px 2px rgb(190, 190, 190, .5);
+    font-size: 2vw;
 }
 
 /* SLIDER */
@@ -143,7 +145,7 @@ i.item-right {
 .gallery.js-flickity {
     box-sizing: border-box;
     margin-bottom: 100px;
-    height: 55vh;
+    height: 500px;
     width: 100%;
 }
 
@@ -159,7 +161,6 @@ i.item-right {
 
 .gallery-cell:nth-child(1) {
     background-image: url("/assets/img/slider/s1.png");
-    background-size:contain;
 }
 
 .gallery-cell:nth-child(2) {
@@ -249,7 +250,10 @@ i.item-right {
 }
 
 .card img {
-    height: 70%;
+    height: 60%;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .card:hover {
@@ -257,29 +261,30 @@ i.item-right {
 }
 
 .container {
-    width: 90%;
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 5px;
 }
 
 .container h4 {
-    margin: 15px 0;
+    margin: 10px 10px;
 }
 
 button.suma-cart {
-    margin: 15px 0;
+    display: inline-block;
+    margin: 10px auto;
+    padding: 5px;
     text-align: center;
-    font-size: 18px;
     background-color: black;
     color: white;
     cursor: pointer;
-    width: 90%;
-}
-
-.cart-button {
-    color: white;
+    width: 60%;
+    align-items: center;
 }
 
 .price {
+    margin: 10px 10px;
     font-size: 20px;
     font-weight: bold;
     color: rgb(133, 60, 133);
@@ -290,7 +295,6 @@ button.suma-cart {
 .pie {
     background-color: black;
     display: flex;
-    height: 300px;
     justify-content: space-around;
     flex-wrap: wrap;
 }
@@ -344,21 +348,82 @@ button.suma-cart {
     }
 
     ul.right {
-        margin-left: 40px;
+        margin-left: 10px;
         width: 100%;
+    }
+
+    .list-nav a {
+        margin: 20px 0;
+    }
+
+    .cart-counter {
+        top: -5%;
+        right: -30%;
     }
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:850px) {
+
+    .navlist {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .navlist li {
+        border: none;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .list-nav a:hover {
+        text-shadow: 2px 2px rgb(190, 190, 190, .5);
+        font-size: 3vw;
+    }
 
     .list-nav a {
-        color: white;
-        transition: .5s;
-        font-size: 1.5vw;
+        font-size: 2.5vw;
+        letter-spacing: 4px;
     }
 
     i.item-right {
         font-size: 5vw;
     }
+}
 
+@media screen and (max-width:550px) {
+    .pie {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .div-ftr {
+        margin-top: 30px;
+        align-self: center;
+    }
+
+    .div-ftr.follow {
+        margin-bottom: 30px;
+    }
+
+    .div-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    li.list-nav {
+        padding: 5px;
+    }
+
+}
+
+/* SECCION MERCADOLIBRE */
+
+.searching {
+    width: 70%;
+    margin: 0 auto;
 }
