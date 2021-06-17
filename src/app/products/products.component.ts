@@ -8,12 +8,19 @@ import { MercadolibreService } from '../services/mercadolibre.service';
 })
 export class ProductsComponent implements OnInit {
 
+  public data:any = []
+
   constructor(
-    
+    private mercadolibreService: MercadolibreService,
   ) { }
 
   ngOnInit(): void {
 
+    this.data=this.mercadolibreService.products 
+
+    this.mercadolibreService.loaderSearch.subscribe(async (value:string) => {
+      this.data = await this.mercadolibreService.getProducts(value)
+    })
   }
 
 }

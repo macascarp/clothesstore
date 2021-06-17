@@ -17,7 +17,8 @@ export class HeaderComponent implements OnInit {
   }
 
   searchButton() {
-    this.mercadolibreService.getProducts(this.search)
+    this.mercadolibreService.getProducts(this.search) 
+    this.mercadolibreService.emitterSearch(this.search)
   }
 
 }

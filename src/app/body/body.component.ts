@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
 
-  constructor() { }
+      /* Crear variable 'aleatoriaData */
 
+  /* Inyectar el servicio de ML */
+  constructor() { 
+
+  }  
+
+  /* Llamo al servicio que trae los datos */
   ngOnInit(): void {
   }
 

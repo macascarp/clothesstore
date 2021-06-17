@@ -1,23 +1,34 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class MercadolibreService {
 
-  constructor(
-    private http:HttpClient
-  ) {}
-  getProducts(search:String) {
-    const urlApi = `https://api.mercadolibre.com/sites/MCO/search?categorie=MCO1430&q=${search}`
-    console.log(urlApi)
-    /* /sites/$SITE_ID/search?category=$CATEGORY_ID
-    $ curl -X GET https://api.mercadolibre.com/categories/
-    /sites/$SITE_ID/search?q=Motorola%20G6
-    MLA1430 */
-    this.http.get(urlApi).subscribe(res => {
-      console.log(res)
-    })
+/* Variables de la clase */
+export class MercadolibreService {
+  public products = [];
+  private searchEvent = new Subject<string>();
+
+  /* Inyectar dependencias */
+  constructor(private http: HttpClient, private router: Router) {}
+
+  /* Observa  */
+  loaderSearch = this.searchEvent.asObservable();
+
+  /* Le enttrega un valor a 'observable */
+  emitterSearch(value: string) {
+    this.searchEvent.next(value);
+  }
+
+  async getProducts(search: String) {
+    const urlApi = `https://api.mercadolibre.com/sites/MCO/search?categorie=MCO1430&q=${search}`;
+
+    const data: any = await this.http.get(urlApi).toPromise();
+    this.router.navigateByUrl('products');
+    this.products = data.results;
+    return this.products;
   }
 }
