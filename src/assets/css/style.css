@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     text-decoration: none;
 }
 
@@ -22,12 +22,12 @@ header {
     cursor: pointer;
 }
 
-.example {
+.form-search {
     width: 40vw;
     box-sizing: border-box;
     display: flex;
 }
-form.example input[type=text] {
+form.form-search input[type=text] {
     border: 1px solid grey;
     width: 100%;
     background: rgb(190, 190, 190);
@@ -38,7 +38,7 @@ form.example input[type=text] {
     overflow: hidden;
     display: inline-block;
 }
-form.example button {
+form.form-search button {
     display: inline-block;
     color: white;
     border: none;
@@ -97,13 +97,7 @@ i.item-right {
     position: absolute;
     top: 0;
     right: 0;
-    color: white;
-    font-size: 10px;
-    box-sizing: border-box;
-    overflow: hidden;
-    background-color: brown;
-    border-radius: 50% 20% / 10% 40%;
-    padding: 4px;
+    font-size: 22%;
 }
 
 /* NAVBAR */
@@ -205,15 +199,46 @@ i.item-right {
     box-sizing: border-box;
     overflow: hidden;
     text-shadow: 2px 2px rgb(37, 37, 37, .5);
+    font-family: 'Roboto', sans-serif;
 }
 
-/* PRODUCTS */
+/* CARDS RANDOM */
 
 .mas-buscados {
     text-align: center;
-    margin: 80px 0;
+    margin: 80px 0 50px;
     font-size: 3vw;
 }
+
+.cards-random {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+    height: 700px;
+    overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-image: url("/assets/img/WANTED.png");
+    background-size: cover;
+}
+
+.desc {
+    position: absolute;
+    top: 1%;
+    right: 5%;
+    background-color: #000000;
+    font-size: 100%;
+    padding: 0 5px 0 5px;
+    color: white;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* CARDS */
 
 .cards {
     display: flex;
@@ -247,7 +272,7 @@ i.item-right {
 }
 
 .card img {
-    height: 60%;
+    height: 300px;
     width: 100%;
     margin: 0;
     box-sizing: border-box;
@@ -264,13 +289,9 @@ i.item-right {
     border-radius: 5px;
 }
 
-.container h4 {
-    margin: 10px 10px;
-}
-
 button.suma-cart {
     display: inline-block;
-    margin: 10px auto;
+    margin: 15px auto;
     padding: 5px;
     text-align: center;
     background-color: black;
@@ -278,13 +299,18 @@ button.suma-cart {
     cursor: pointer;
     width: 60%;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container h4 {
+    margin: 0 10px;
 }
 
 .price {
-    margin: 10px 10px;
     font-size: 20px;
     font-weight: bold;
-    color: rgb(133, 60, 133);
+    color: #5B17AA;
+    margin: 0 10px;
 }
 
 /* FOOTER */
@@ -356,9 +382,6 @@ button.suma-cart {
         margin: 20px 0;
     }
 
-    .right li:nth-of-type(1){
-        font-size: 50px;
-    }
 }
 
 @media screen and (max-width:850px) {
@@ -389,12 +412,6 @@ button.suma-cart {
     i.item-right {
         font-size: 5vw;
     }
-
-    .right li:nth-of-type(1){
-        font-size: 50px;
-    }
-
-
 }
 
 @media screen and (max-width:550px) {
@@ -423,11 +440,6 @@ button.suma-cart {
     li.list-nav {
         padding: 5px;
     }
-
-    .right li:nth-of-type(1){
-        font-size: 50px;
-    }
-
 }
 
 /* SECCION MERCADOLIBRE */

@@ -4,7 +4,7 @@
         <img src="assets/img/logo.png" class="logo">
     </a>
 
-    <form class="example" action="#">
+    <form class="form-search" action="#">
         <input type="text" placeholder="Buscar producto" name="search2"
         [(ngModel)]="search">
         <button type="submit" (click)="searchButton()"><i class='bx bx-search'></i></button>
@@ -15,7 +15,7 @@
         <li>
             <a href="#cart">
                 <i class='bx bx-cart item-right'>
-                <p class="cart-counter">0</p>
+                    <i class='bx bxs-circle cart-counter' style='color:#df0000'></i>
                 </i>
             </a>
         </li>
@@ -28,7 +28,7 @@
             <a href="#login"><button type="submit" class="item-right">Iniciar Sesión</button></a>
         </li>
     </ul>
-</div>
+    </div>
 </header>
 
 <nav class="nav-bar">
