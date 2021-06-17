@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MercadolibreService } from 'src/app/services/mercadolibre.service';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  public search:string= ''
 
-  constructor() { }
+  constructor(
+    private mercadolibreService: MercadolibreService,
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  searchButton() {
+    this.mercadolibreService.getProducts(this.search)
   }
 
 }

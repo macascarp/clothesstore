@@ -13,6 +13,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
     box-sizing: border-box;
+    position: sticky;
 }
 
 .logo {
@@ -83,19 +84,19 @@ li button{
 }
 
 i.item-right {
-    font-size: 2.5vw;
+    font-size: 50px;
 }
 
 .right li:nth-of-type(1){
     position: relative;
     display: inline-block;
-    width: 10%;
+    width: 60px;
 }
 
 .cart-counter {
     position: absolute;
-    top: 10%;
-    right: 20%;
+    top: 0;
+    right: 0;
     color: white;
     font-size: 10px;
     box-sizing: border-box;
@@ -180,10 +181,6 @@ i.item-right {
 
 /* SECTION */
 
-/* .alignRow {
-    display: inline-block;
-}
- */
 .imageColumn {
     align-self: center;
     width: 50%;
@@ -240,8 +237,8 @@ i.item-right {
     position: absolute;
     top: 1%;
     right: 5%;
-    background-color: rgb(133, 60, 133);
-    font-size: 1.5vw;
+    background-color: #000000;
+    font-size: 100%;
     padding: 0 5px 0 5px;
     color: white;
     letter-spacing: 1px;
@@ -342,9 +339,12 @@ button.suma-cart {
         margin-right: 10vw;
     }
 
+    .div-right{
+        width: 50%;
+    }
+
     .right li {
-        margin: 10px;
-        display: inline-block;
+        width: 30%;
     }
 
     ul.right {
@@ -356,9 +356,8 @@ button.suma-cart {
         margin: 20px 0;
     }
 
-    .cart-counter {
-        top: -5%;
-        right: -30%;
+    .right li:nth-of-type(1){
+        font-size: 50px;
     }
 }
 
@@ -390,6 +389,12 @@ button.suma-cart {
     i.item-right {
         font-size: 5vw;
     }
+
+    .right li:nth-of-type(1){
+        font-size: 50px;
+    }
+
+
 }
 
 @media screen and (max-width:550px) {
@@ -417,6 +422,10 @@ button.suma-cart {
 
     li.list-nav {
         padding: 5px;
+    }
+
+    .right li:nth-of-type(1){
+        font-size: 50px;
     }
 
 }
