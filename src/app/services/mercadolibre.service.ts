@@ -31,4 +31,10 @@ export class MercadolibreService {
     this.products = data.results;
     return this.products;
   }
+
+  async getRandomProduct() {
+    const urlApi = `https://api.mercadolibre.com/sites/MCO/search?category=MCO1430`;
+    const data: any = await this.http.get(urlApi).toPromise();
+    return data.results;
+  }
 }

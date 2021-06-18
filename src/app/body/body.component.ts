@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { MercadolibreService } from '../services/mercadolibre.service';
 
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
-  styleUrls: ['./body.component.css']
+  styleUrls: ['./body.component.css'],
 })
 export class BodyComponent implements OnInit {
+  /* Crear variable 'aleatoriaData */
 
-      /* Crear variable 'aleatoriaData */
+  public random: any = [];
 
   /* Inyectar el servicio de ML */
-  constructor() { 
-
-  }  
+  constructor(private mercadolibreService: MercadolibreService) {}
 
   /* Llamo al servicio que trae los datos */
-  ngOnInit(): void {
+  async ngOnInit() {
+    this.random = await this.mercadolibreService.getRandomProduct();
   }
-
 }

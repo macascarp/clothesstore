@@ -4,165 +4,31 @@
   <div class="gallery-cell"></div>
 </div>
 
-
-
 <div class="alignRow">
   <div class="imageColumn">
-  <img src="assets/img/mask.jpeg" alt="mask">
-  <div class="texto">PROTECCIÓN</div>
-</div>
+    <img src="assets/img/mask.jpeg" alt="mask" />
+    <div class="texto">PROTECCIÓN</div>
+  </div>
   <div class="imageColumn">
-  <img src="assets/img/kids.jpeg" alt="kids">
-  <div class="texto">MODA INFANTIL</div>
+    <img src="assets/img/kids.jpeg" alt="kids" />
+    <div class="texto">MODA INFANTIL</div>
   </div>
 </div>
 
 <h2 class="mas-buscados">PRODUCTOS MÁS BUSCADOS</h2>
 
-<!-- ngFor -->
 <div class="cards-random">
-  <div class="card">
-    <img src="assets/img/men.jpeg" alt="Avatar" style="width:100%">
-    <div class="desc"> - 50%</div>
+  <div class="card" *ngFor="let item of random">
+    <img [src]="item.thumbnail" alt="Avatar" style="width: 100%" />
+    <div class="desc">- 50%</div>
     <div class="container">
-      <h4><b>Product Name</b></h4>
-      <p class="price">$$$ Price</p>
+      <h4>{{ item.title }}</h4>
+      <p class="price">COP {{ item.price | currency }}</p>
       <button class="suma-cart">
-        <span class="cart-button">
-          <a>Ir a la tienda</a></span>
+        <a [href]="item.permalink" target="_blank" style="color: white"
+          >Ir a la tienda</a
+        >
       </button>
     </div>
   </div>
-
-<div class="card">
-  <img src="assets/img/men.jpeg" alt="Avatar" style="width:100%">
-  <div class="desc"> - 25%</div>
-  <div class="container">
-    <h4><b>Product Name</b></h4> 
-    <p class="price">$$$ Price</p> 
-    <button class="suma-cart">
-      <span class="cart-button">
-        <a>Ir a la tienda</a></span>
-    </button>
-  </div>
-</div>
-
-<div class="card">
-  <img src="assets/img/men.jpeg" alt="Avatar" style="width:100%">
-  <div class="desc"> - 30%</div>
-  <div class="container">
-    <h4><b>Product Name</b></h4> 
-    <p class="price">$$$ Price</p> 
-    <button class="suma-cart">
-      <span class="cart-button">
-        <a>Ir a la tienda</a></span>
-    </button>
-  </div>
-</div>
-
-<div class="card">
-  <img src="assets/img/men.jpeg" alt="Avatar" style="width:100%">
-  <div class="desc"> - 50%</div>
-  <div class="container">
-    <h4><b>Product Name</b></h4> 
-    <p class="price">$$$ Price</p> 
-    <button class="suma-cart">
-      <span class="cart-button">
-        <a>Ir a la tienda</a></span>
-    </button>
-  </div>
-</div>
-
-<div class="card">
-  <img src="assets/img/men.jpeg" alt="Avatar" style="width:100%">
-  <div class="desc"> - 25%</div>
-  <div class="container">
-    <h4><b>Product Name</b></h4> 
-    <p class="price">$$$ Price</p> 
-    <button class="suma-cart">
-      <span class="cart-button">
-        <a>Ir a la tienda</a></span>
-
-    </button>
-  </div>
-</div>
-
-<div class="card">
-  <img src="assets/img/men.jpeg" alt="Avatar" style="width:100%">
-  <div class="desc"> - 25%</div>
-  <div class="container">
-    <h4><b>Product Name</b></h4> 
-    <p class="price">$$$ Price</p> 
-    <button class="suma-cart">
-      <span class="cart-button">
-        <a>Ir a la tienda</a></span>
-    </button>
-  </div>
-</div>
-
-<div class="card">
-  <img src="assets/img/men.jpeg" alt="Avatar" style="width:100%">
-  <div class="desc"> - 25%</div>
-  <div class="container">
-    <h4><b>Product Name</b></h4> 
-    <p class="price">$$$ Price</p> 
-    <button class="suma-cart">
-      <span class="cart-button">
-        <a>Ir a la tienda</a></span>
-    </button>
-  </div>
-</div>
-
-<div class="card">
-  <img src="assets/img/men.jpeg" alt="Avatar" style="width:100%">
-  <div class="desc"> - 25%</div>
-  <div class="container">
-    <h4><b>Product Name</b></h4> 
-    <p class="price">$$$ Price</p> 
-    <button class="suma-cart">
-      <span class="cart-button">
-        <a>Ir a la tienda</a></span>
-    </button>
-  </div>
-</div>
-
-<div class="card">
-  <img src="assets/img/men.jpeg" alt="Avatar" style="width:100%">
-  <div class="desc"> - 25%</div>
-  <div class="container">
-    <h4><b>Product Name</b></h4> 
-    <p class="price">$$$ Price</p> 
-    <button class="suma-cart">
-      <span class="cart-button">
-        <a>Ir a la tienda</a></span>
-    </button>
-  </div>
-</div>
-
-<div class="card">
-  <img src="assets/img/men.jpeg" alt="Avatar" style="width:100%">
-  <div class="desc"> - 25%</div>
-  <div class="container">
-    <h4><b>Product Name</b></h4> 
-    <p class="price">$$$ Price</p> 
-    <button class="suma-cart">
-      <span class="cart-button">
-        <a>Ir a la tienda</a></span>
-    </button>
-  </div>
-</div>
-
-<div class="card">
-  <img src="assets/img/men.jpeg" alt="Avatar" style="width:100%">
-  <div class="desc"> - 25%</div>
-  <div class="container">
-    <h4><b>Product Name</b></h4> 
-    <p class="price">$$$ Price</p> 
-    <button class="suma-cart">
-      <span class="cart-button">
-        <a>Ir a la tienda</a></span>
-    </button>
-  </div>
-</div>
-
 </div>
